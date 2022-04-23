@@ -1,13 +1,20 @@
+from strava_calendar_summary_data_access.models import StravaAuth, CalendarAuth
+
 class User:
-    def __init__(self, user_id, access_token, refresh_token, token_expires_at):
-        self.user_id = user_id
-        self.access_token = access_token
-        self.refresh_token = refresh_token
-        self.token_expires_at = token_expires_at
+    def __init__(self, id: str, strava_auth: StravaAuth, calendar_auth: CalendarAuth):
+        self.id = id
+        self.strava_auth = strava_auth
+        self.calendar_auth = calendar_auth
 
     @staticmethod
     def from_dict(source):
-        return User(**source)
+        strava_auth = StravaAuth.from_dict(source['strava_auth']) if 'strava_auth' in source else None
+        calendar_auth = CalendarAuth.from_dict(source['calendar_auth']) if 'calendar_auth' in source else None
+        return User(source['id'], strava_auth, calendar_auth)
 
     def to_dict(self):
-        return self.__dict__
+        d = {}
+        d['id'] = self.id
+        d['strava_auth'] = self.strava_auth.to_dict()
+        d['calendar_auth'] = self.calendar_auth.to_dict()
+        return d
