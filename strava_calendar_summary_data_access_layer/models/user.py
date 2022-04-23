@@ -1,4 +1,4 @@
-from strava_calendar_summary_data_access.models import StravaAuth, CalendarAuth
+from ..models import StravaAuth, CalendarAuth
 
 class User:
     def __init__(self, id: str, strava_auth: StravaAuth, calendar_auth: CalendarAuth):

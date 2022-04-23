@@ -1,5 +1,5 @@
-from strava_calendar_summary_data_access.models.user import User
-from strava_calendar_summary_data_access.controllers.base_controller import BaseController
+from ..models import User
+from .base_controller import BaseController
 
 USER_COLLECTION_NAME = u'Users'
 
