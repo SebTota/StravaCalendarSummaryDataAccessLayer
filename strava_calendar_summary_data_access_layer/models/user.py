@@ -1,4 +1,5 @@
-from ..models import StravaAuth, CalendarAuth
+from .calendar import CalendarAuth
+from .strava import StravaAuth
 
 class User:
     def __init__(self, id: str, strava_auth: StravaAuth, calendar_auth: CalendarAuth):

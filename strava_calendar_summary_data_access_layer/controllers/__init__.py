@@ -1,3 +1,2 @@
-from __future__ import absolute_import
-
+from .base_controller import BaseController
 from .user_controller import UserController
