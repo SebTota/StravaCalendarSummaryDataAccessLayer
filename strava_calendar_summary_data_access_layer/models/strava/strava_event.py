@@ -1,5 +1,5 @@
 class StravaEvent():
-    def __init__(self, object_type: str, object_id: str, aspect_type: str, updates: dict, owner_id: int, event_time: str):
+    def __init__(self, object_type: str, object_id: int, aspect_type: str, updates: dict, owner_id: int, event_time: int):
         self.object_type = object_type  # 'activity' or 'athlete'
         self.object_id = object_id  # the activity id in Strava
         self.aspect_type = aspect_type
