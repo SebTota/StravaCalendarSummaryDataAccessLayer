@@ -3,7 +3,7 @@ from oauth2client import client
 
 
 class User:
-    def __init__(self, id: str, strava_auth: StravaAuth, calendar_auth: oauth2client):
+    def __init__(self, id: str, strava_auth: StravaAuth, calendar_auth: client):
         self.id = id
         self.strava_auth = strava_auth
         self.calendar_auth = calendar_auth
@@ -11,7 +11,7 @@ class User:
     @staticmethod
     def from_dict(source):
         strava_auth = StravaAuth.from_dict(source['strava_auth']) if 'strava_auth' in source else None
-        calendar_auth = oauth2client.from_json(source['calendar_auth']) if 'calendar_auth' in source else None
+        calendar_auth = client.from_json(source['calendar_auth']) if 'calendar_auth' in source else None
         return User(source['id'], strava_auth, calendar_auth)
 
     def to_dict(self):
