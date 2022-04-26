@@ -1,10 +1,12 @@
+from .strava_event_type import StravaEventType
+
 class StravaEvent():
-    def __init__(self, object_type: str, object_id: int, aspect_type: str, updates: dict, owner_id: int, event_time: int):
+    def __init__(self, object_type: str, object_id: int, event_type: StravaEventType, updates: dict, athlete_id: int, event_time: int):
         self.object_type = object_type  # 'activity' or 'athlete'
         self.object_id = object_id  # the activity id in Strava
-        self.aspect_type = aspect_type
+        self.event_type = event_type
         self.updates = updates
-        self.owner_id = owner_id
+        self.athlete_id = athlete_id
         self.event_time = event_time
 
     @staticmethod
