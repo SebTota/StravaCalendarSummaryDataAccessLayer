@@ -12,7 +12,7 @@ class User:
     @staticmethod
     def from_dict(source):
         strava_auth = StravaAuth.from_dict(source['strava_auth']) if 'strava_auth' in source else None
-        calendar_auth = client.from_json(json.dumps(source['calendar_auth'])) if 'calendar_auth' in source else None
+        calendar_auth = client.OAuth2Credentials.from_json(json.dumps(source['calendar_auth'])) if 'calendar_auth' in source else None
         return User(source['id'], strava_auth, calendar_auth)
 
     def to_dict(self):
