@@ -3,4 +3,4 @@ from .controllers import BaseController, StravaCredentialsController, GoogleCale
 
 # Models
 from .models import StravaCredentials, \
-    StravaEventType, StravaEventUpdateType, StravaEvent, GoogleCalendarCredentials
+    StravaEventType, StravaEventUpdateType, StravaEvent

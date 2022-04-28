@@ -1,6 +1,5 @@
 class StravaCredentials:
-    def __init__(self, user_id: str, access_token: str, refresh_token: str, expiry_date: int):
-        self.user_id = user_id
+    def __init__(self, access_token: str, refresh_token: str, expiry_date: int):
         self.access_token = access_token
         self.refresh_token = refresh_token
         self.expiry_date = expiry_date
