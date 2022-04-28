@@ -1,2 +1,3 @@
 from .base_controller import BaseController
-from .user_controller import UserController
+from .google_calendar_credentials_controller import GoogleCalendarCredentialsController
+from .strava_credentials_controller import StravaCredentialsController

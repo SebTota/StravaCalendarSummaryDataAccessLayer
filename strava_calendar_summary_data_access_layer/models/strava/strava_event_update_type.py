@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class StravaEventUpdateType(Enum):
     TITLE = 'title'  # title of the activity
     TYPE = 'type'  # type of activity

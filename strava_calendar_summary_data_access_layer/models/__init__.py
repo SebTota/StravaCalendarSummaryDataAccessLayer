@@ -1,2 +1,1 @@
-from .user import User
-from .strava import StravaAuth, StravaEventType, StravaEventUpdateType, StravaEvent
+from .strava import StravaCredentials, StravaEventType, StravaEventUpdateType, StravaEvent

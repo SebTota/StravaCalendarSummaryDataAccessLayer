@@ -1,6 +1,6 @@
 # Controllers
-from .controllers import BaseController, UserController
+from .controllers import BaseController, StravaCredentialsController, GoogleCalendarCredentialsController
 
 # Models
-from .models import User, StravaAuth, \
+from .models import StravaCredentials, \
     StravaEventType, StravaEventUpdateType, StravaEvent
