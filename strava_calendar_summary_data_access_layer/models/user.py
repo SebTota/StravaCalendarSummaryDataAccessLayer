@@ -15,7 +15,7 @@ class User:
     @staticmethod
     def from_dict(source):
         user_id = source['user_id']
-        strava_credentials = StravaCredentials.from_dict(source['strava_auth']) if 'strava_credentials' in source else None
+        strava_credentials = StravaCredentials.from_dict(source['strava_credentials']) if 'strava_credentials' in source else None
         calendar_credentials = Credentials.from_authorized_user_info(
             source['calendar_credentials']) if 'calendar_credentials' in source else None
         calendar_id = source['calendar_id'] if 'calendar_id' in source else None
