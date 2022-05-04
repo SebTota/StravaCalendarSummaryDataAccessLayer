@@ -1,2 +1,3 @@
 from .base_controller import BaseController
+from .calendar_event_controller import CalendarEventController
 from .user_controller import UserController
