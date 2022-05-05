@@ -1,4 +1,4 @@
-from ..models import User
+from ..models import CalendarEvent
 from .base_controller import BaseController
 
 from google.cloud import firestore
@@ -18,7 +18,7 @@ class CalendarEventController(BaseController):
             .collection(STRAVA_EVENTS_COLLECTION_NAME)
 
     def _from_dict(self, obj):
-        return User.from_dict(obj.to_dict())
+        return CalendarEvent.from_dict(obj.to_dict())
 
-    def _to_dict(self, obj: User):
+    def _to_dict(self, obj: CalendarEvent):
         return obj.to_dict()
