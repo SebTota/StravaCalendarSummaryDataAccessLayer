@@ -10,7 +10,7 @@ class User:
                  strava_credentials: StravaCredentials = None,
                  calendar_credentials: Credentials = None,
                  calendar_id: str = None,
-                 calendar_preferences: CalendarPreferences = None):
+                 calendar_preferences: CalendarPreferences = CalendarPreferences()):
         self.user_id: str = user_id
         self.first_name: str = first_name
         self.last_name: str = last_name
@@ -30,7 +30,7 @@ class User:
             source['calendar_credentials']) if 'calendar_credentials' in source else None
         calendar_id = source['calendar_id'] if 'calendar_id' in source else None
         calendar_preferences = CalendarPreferences.from_dict(source['calendar_preferences']) \
-            if 'calendar_preferences' in source else None
+            if 'calendar_preferences' in source else CalendarPreferences()
         return User(user_id, first_name, last_name, strava_credentials,
                     calendar_credentials, calendar_id, calendar_preferences)
 
