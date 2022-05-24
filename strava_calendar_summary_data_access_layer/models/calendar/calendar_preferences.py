@@ -1,12 +1,14 @@
 from .end_of_week_type import EndOfWeekType
 
 DEFAULT_END_OF_WEEK = EndOfWeekType.SUNDAY
+DEFAULT_TITLE_TEMPLATE = '{distance_miles} {type}'
+DEFAULT_SUMMARY_TEMPLATE = 'Distance: {distance_miles}\nDuration: {duration}'
 
 
 class CalendarPreferences:
-    def __init__(self, per_run_summary_enabled: bool = True, per_run_title_template: str = None, per_run_summary_template: str = None,
-                 daily_run_summary_enabled: bool = True, daily_run_title_template: str = None, daily_run_summary_template: str = None,
-                 weekly_run_summary_enabled: bool = True, weekly_run_title_template: str = None, weekly_run_summary_template: str = None,
+    def __init__(self, per_run_summary_enabled: bool = True, per_run_title_template: str = DEFAULT_TITLE_TEMPLATE, per_run_summary_template: str = DEFAULT_SUMMARY_TEMPLATE,
+                 daily_run_summary_enabled: bool = True, daily_run_title_template: str = DEFAULT_TITLE_TEMPLATE, daily_run_summary_template: str = DEFAULT_SUMMARY_TEMPLATE,
+                 weekly_run_summary_enabled: bool = True, weekly_run_title_template: str = DEFAULT_TITLE_TEMPLATE, weekly_run_summary_template: str = DEFAULT_SUMMARY_TEMPLATE,
                  end_of_week: EndOfWeekType = DEFAULT_END_OF_WEEK):
         self.per_run_summary_enabled = per_run_summary_enabled
         self.per_run_summary_template = per_run_summary_template
