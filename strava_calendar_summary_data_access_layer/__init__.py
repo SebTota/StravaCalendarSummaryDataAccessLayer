@@ -1,6 +1,8 @@
 # Controllers
-from .controllers import BaseController, UserController, CalendarEventController
+from .controllers import BaseController, UserController, CalendarEventController, \
+    DailySummaryCalendarEventsController, WeeklySummaryCalendarEventsController
 
 # Models
 from .models import User, StravaCredentials, \
-    StravaEventType, StravaEventUpdateType, StravaEvent, CalendarEvent, CalendarPreferences, EndOfWeekType
+    StravaEventType, StravaEventUpdateType, StravaEvent, CalendarEvent, CalendarPreferences, EndOfWeekType, \
+    CalendarSummaryEvent
