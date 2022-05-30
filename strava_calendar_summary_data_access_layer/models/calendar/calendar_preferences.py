@@ -64,22 +64,22 @@ class CalendarPreferences:
 
     def to_dict(self):
         d = {
-            'per_run_summary_enabled': self.per_run_summary_enabled if 'per_run_summary_enabled' is not None else True,
-            'daily_run_summary_enabled': self.daily_run_summary_enabled if 'daily_run_summary_enabled' is not None else True,
-            'weekly_run_summary_enabled': self.weekly_run_summary_enabled if 'weekly_run_summary_enabled' is not None else True}
+            'per_run_summary_enabled': self.per_run_summary_enabled if self.per_run_summary_enabled is not None else True,
+            'daily_run_summary_enabled': self.daily_run_summary_enabled if self.daily_run_summary_enabled is not None else True,
+            'weekly_run_summary_enabled': self.weekly_run_summary_enabled if self.weekly_run_summary_enabled is not None else True}
 
-        if 'per_run_description_template' is not None:
+        if self.per_run_description_template is not None:
             d['per_run_description_template'] = self.per_run_description_template
-        if 'daily_run_description_template' is not None:
+        if self.daily_run_description_template is not None:
             d['daily_run_description_template'] = self.daily_run_description_template
-        if 'weekly_run_description_template' is not None:
+        if self.weekly_run_description_template is not None:
             d['weekly_run_description_template'] = self.weekly_run_description_template
 
-        if 'per_run_title_template' is not None:
+        if self.per_run_title_template is not None:
             d['per_run_title_template'] = self.per_run_title_template
-        if 'daily_run_title_template' is not None:
+        if self.daily_run_title_template is not None:
             d['daily_run_title_template'] = self.daily_run_title_template
-        if 'weekly_run_title_template' is not None:
+        if self.weekly_run_title_template is not None:
             d['weekly_run_title_template'] = self.weekly_run_title_template
 
         d['end_of_week'] = self.end_of_week.value if self.end_of_week is not None else DEFAULT_END_OF_WEEK
