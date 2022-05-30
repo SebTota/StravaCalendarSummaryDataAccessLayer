@@ -14,3 +14,8 @@ class EndOfWeekType(Enum):
         else:
             raise NotImplementedError
 
+    def get_weekday_num_val(self):
+        if self.name == EndOfWeekType.SATURDAY.name:
+            return 5
+        elif self.name == EndOfWeekType.SUNDAY.name:
+            return 6
